@@ -48,7 +48,7 @@ Partial Class Form1
         'BtnAgregar
         '
         Me.BtnAgregar.BackColor = System.Drawing.Color.LightGreen
-        Me.BtnAgregar.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnAgregar.Font = New System.Drawing.Font("Arial Black", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAgregar.Location = New System.Drawing.Point(76, 244)
         Me.BtnAgregar.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnAgregar.Name = "BtnAgregar"
@@ -59,8 +59,8 @@ Partial Class Form1
         '
         'BtnModificar
         '
-        Me.BtnModificar.BackColor = System.Drawing.Color.Khaki
-        Me.BtnModificar.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnModificar.BackColor = System.Drawing.Color.LightPink
+        Me.BtnModificar.Font = New System.Drawing.Font("Arial Black", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModificar.Location = New System.Drawing.Point(191, 244)
         Me.BtnModificar.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnModificar.Name = "BtnModificar"
@@ -72,7 +72,7 @@ Partial Class Form1
         'BtnBorrar
         '
         Me.BtnBorrar.BackColor = System.Drawing.Color.LightCoral
-        Me.BtnBorrar.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnBorrar.Font = New System.Drawing.Font("Arial Black", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBorrar.Location = New System.Drawing.Point(307, 244)
         Me.BtnBorrar.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnBorrar.Name = "BtnBorrar"
@@ -83,8 +83,8 @@ Partial Class Form1
         '
         'BtnSalir
         '
-        Me.BtnSalir.BackColor = System.Drawing.Color.LightGray
-        Me.BtnSalir.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnSalir.BackColor = System.Drawing.Color.Red
+        Me.BtnSalir.Font = New System.Drawing.Font("Arial Black", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.Location = New System.Drawing.Point(422, 244)
         Me.BtnSalir.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnSalir.Name = "BtnSalir"

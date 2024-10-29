@@ -1,11 +1,10 @@
-﻿Imports System.Drawing.Text
-Imports System.Text.Json
+﻿Imports System.Text.Json
 Public Class Form1
 
-    Public libros As New List(Of Libro)()
+    Public libros(-1) As Libro
     Private Const archivoLibros As String = "libros.json"
 
-
+    Dim opti As JsonSerializerOptions = New JsonSerializerOptions
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarLibrosDesdeArchivo()
         actualizarListBox()
@@ -20,23 +19,28 @@ Public Class Form1
     End Sub
 
     Private Sub CargarLibrosDesdeArchivo()
-        libros = Libro.CargarLibros(archivoLibros)
+        Dim jsonArchivo As String = My.Computer.FileSystem.ReadAllText(archivoLibros)
+        libros = JsonSerializer.Deserialize(Of Libro())(jsonArchivo, opti)
+
     End Sub
 
     Public Sub GuardarLibrosEnArchivo()
-        Libro.GuardarLibros(libros, archivoLibros)
+
     End Sub
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
-        Me.Hide()
         Form2.Show()
         actualizarListBox()
     End Sub
 
     Private Sub BtnBorrar_Click_1(sender As Object, e As EventArgs) Handles BtnBorrar.Click
         If lstLibros.SelectedItem IsNot Nothing Then
-            libros.RemoveAt(lstLibros.SelectedIndex)
-            GuardarLibrosEnArchivo()
+            For i As Integer = lstLibros.SelectedIndex To (libros.Length) - 2
+
+                libros(i) = libros(i + 1)
+
+            Next
+            ReDim Preserve libros(libros.Length - 2)
             actualizarListBox()
         Else
             MessageBox.Show("Por favor, selecciona un libro para borrar.")
@@ -48,9 +52,28 @@ Public Class Form1
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
-        Me.Hide()
         Form2.Show()
         actualizarListBox()
     End Sub
 End Class
 
+
+'Public Shared Function CargarLibros(archivo As String) As List(Of Libro)
+'    If Not File.Exists(archivo) Then Return New List(Of Libro)()
+'    Dim json As String = File.ReadAllText(archivo)
+'    Dim libros As List(Of Libro) = JsonConvert.DeserializeObject(Of List(Of Libro))(json)
+
+'    ' Actualiza el próximo ID
+'    If libros.Count > 0 Then
+'        nextID = libros.Last().Id + 10
+'    End If
+
+'    Return libros
+'End Function
+
+
+
+'Public Shared Sub GuardarLibros(libros As List(Of Libro), archivo As String)
+'    Dim json As String = JsonConvert.SerializeObject(libros, Formatting.Indented)
+'    File.WriteAllText(archivo, json)
+'End Sub

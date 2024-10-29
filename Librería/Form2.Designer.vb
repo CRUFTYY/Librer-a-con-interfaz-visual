@@ -27,7 +27,7 @@ Partial Class Form2
         '
         'txtAutor
         '
-        Me.txtAutor.Location = New System.Drawing.Point(194, 130)
+        Me.txtAutor.Location = New System.Drawing.Point(194, 126)
         Me.txtAutor.Name = "txtAutor"
         Me.txtAutor.Size = New System.Drawing.Size(100, 20)
         Me.txtAutor.TabIndex = 1
@@ -49,53 +49,59 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(117, 137)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(117, 129)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(32, 13)
+        Me.Label1.Size = New System.Drawing.Size(48, 20)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Autor"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(117, 72)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(116, 65)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(33, 13)
+        Me.Label2.Size = New System.Drawing.Size(47, 20)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Titulo"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(117, 194)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(118, 194)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(26, 13)
+        Me.Label3.Size = New System.Drawing.Size(38, 20)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Año"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(117, 247)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 13)
+        Me.Label4.Size = New System.Drawing.Size(66, 20)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Paginas"
         '
         'btnModif
         '
-        Me.btnModif.Location = New System.Drawing.Point(102, 316)
+        Me.btnModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModif.Location = New System.Drawing.Point(102, 302)
         Me.btnModif.Name = "btnModif"
-        Me.btnModif.Size = New System.Drawing.Size(75, 23)
+        Me.btnModif.Size = New System.Drawing.Size(88, 37)
         Me.btnModif.TabIndex = 8
         Me.btnModif.Text = "Modificar"
         Me.btnModif.UseVisualStyleBackColor = True
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(219, 316)
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregar.Location = New System.Drawing.Point(219, 302)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.Size = New System.Drawing.Size(86, 37)
         Me.btnAgregar.TabIndex = 9
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True

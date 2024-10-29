@@ -1,4 +1,5 @@
 ﻿Imports System.Text.Json
+Imports System.IO
 Public Class Form1
 
     Public libros(-1) As Libro
@@ -19,9 +20,9 @@ Public Class Form1
     End Sub
 
     Private Sub CargarLibrosDesdeArchivo()
+
         Dim jsonArchivo As String = My.Computer.FileSystem.ReadAllText(archivoLibros)
         libros = JsonSerializer.Deserialize(Of Libro())(jsonArchivo, opti)
-
     End Sub
 
     Public Sub GuardarLibrosEnArchivo()
@@ -56,24 +57,3 @@ Public Class Form1
         actualizarListBox()
     End Sub
 End Class
-
-
-'Public Shared Function CargarLibros(archivo As String) As List(Of Libro)
-'    If Not File.Exists(archivo) Then Return New List(Of Libro)()
-'    Dim json As String = File.ReadAllText(archivo)
-'    Dim libros As List(Of Libro) = JsonConvert.DeserializeObject(Of List(Of Libro))(json)
-
-'    ' Actualiza el próximo ID
-'    If libros.Count > 0 Then
-'        nextID = libros.Last().Id + 10
-'    End If
-
-'    Return libros
-'End Function
-
-
-
-'Public Shared Sub GuardarLibros(libros As List(Of Libro), archivo As String)
-'    Dim json As String = JsonConvert.SerializeObject(libros, Formatting.Indented)
-'    File.WriteAllText(archivo, json)
-'End Sub

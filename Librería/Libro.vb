@@ -16,6 +16,10 @@ Public Class Libro
         Paginas = paginas_
     End Sub
 
+    Public Sub New()
+
+    End Sub
+
     Public Property Id As Integer
         Get
             Return _id
@@ -67,8 +71,4 @@ Public Class Libro
         Return $"ID: {_id} - Título: {_titulo} - Autor: {_autor} - Año: {_anio} - Páginas: {_paginas}"
     End Function
 
-    ' Método para serializar la lista de libros
-
-
-    ' Método para deserializar la lista de libros
 End Class
